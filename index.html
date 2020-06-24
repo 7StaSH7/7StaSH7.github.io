@@ -23,7 +23,7 @@
                 <fieldset class="form__fieldset">
                     <div class="form__field">
                         <input class="form__input" type="text" name="name"
-                            pattern="([А-Яа-яЁё]+)|([А-Яа-яЁё\-]+[А-Яа-яЁё]{2,})$" minlength="2" maxlength="20"
+                            pattern="^[А-ЯЁ][а-яё]*([-][А-ЯЁ][а-яё]*)?" minlength="2" maxlength="20"
                             placeholder="Имя" required />
                     </div>
                     <div class="form__field">
@@ -34,7 +34,7 @@
                     </div>
                     <div class="form__field">
                         <input class="form__input" type="text" name="tel" placeholder="Телефон"
-                            pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" minlength="" maxlength="18"
+                            pattern="(\+7|7|8)[- _]*\(?[- _]*(\d{3}[- _]*\)?([- _]*\d){7}|\d\d[- _]*\d\d[- _]*\)?([- _]*\d){6})" minlength="" maxlength="18"
                             required />
                         <span class="form__error">Недопустимый формат номера</span>
                     </div>
